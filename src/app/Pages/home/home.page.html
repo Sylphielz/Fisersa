@@ -1,0 +1,49 @@
+<ion-split-pane>
+  <ion-menu contentId="content">
+
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Menu Fisersa</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-list >
+        <ion-menu-toggle auto-hide="false" *ngFor="let page of menuPages" >
+          <ion-item (click)="openPopup(page)" class="animated fadeInLeft faster" [class.active-item]="selectedPath.startsWith(page.url)" >
+            <ion-icon slot="start" [name]="page.icon"></ion-icon>
+            <ion-label>{{ page.title }}</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        
+        <ion-button (click)="openSlides(page)">
+          <ion-icon name="log-out" slot="start"></ion-icon>
+          TUTORIAL</ion-button>
+      </ion-list>
+    </ion-content>
+
+  </ion-menu>
+
+  <ion-router-outlet id="content" main></ion-router-outlet>
+</ion-split-pane>
+
+<ion-footer style="position: fixed; bottom: 0;">
+  <ion-tab-bar>
+
+    <ion-tab-button routerLink="/home/main" tab="home">
+      <ion-label>Home</ion-label>
+      <ion-icon name="home"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button routerLink="/home/stoplines" tab="stoplines">
+      <ion-label>S&L</ion-label>
+      <ion-icon name="map"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button routerLink="/home/favorites" tab="favorites">
+      <ion-label>Favorites</ion-label>
+      <ion-icon name="star"></ion-icon>
+    </ion-tab-button>
+
+  </ion-tab-bar>
+</ion-footer>

@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <div class="hdr animated jackInTheBox delay 2s">LANGUAGE</div>
+  </ion-toolbar>
+</ion-header>
+
+  <ion-list padding>
+      <ion-item (click)="changeLanguage('en')">
+        <ion-icon *ngIf="currentLanguage == 'en'" name="radio-button-on" item-start></ion-icon>
+        <ion-icon *ngIf="currentLanguage != 'en'" name="radio-button-off" item-start></ion-icon>
+          English
+      </ion-item>
+      <ion-item (click)="changeLanguage('es')">
+        <ion-icon *ngIf="currentLanguage == 'es'" name="radio-button-on" item-start></ion-icon>
+        <ion-icon *ngIf="currentLanguage != 'es'" name="radio-button-off" item-start></ion-icon>
+          Español
+      </ion-item>
+      <ion-item (click)="changeLanguage('ca')">
+        <ion-icon *ngIf="currentLanguage == 'ca'" name="radio-button-on" item-start></ion-icon>
+        <ion-icon *ngIf="currentLanguage != 'ca'" name="radio-button-off" item-start></ion-icon>
+          Català
+      </ion-item>
+      
+    </ion-list>
+    
+    <ion-item style="text-align: end">
+        <button ion-button (click)="saveLanguage()">Guardar cambios</button>
+      </ion-item>

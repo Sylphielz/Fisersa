@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="closeModal()">
+        <ion-icon name="home"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <div class="hdr animated jackInTheBox delay 3s">RouteMap</div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <a> {{ routeId }} </a>
+
+  <ion-card class="divmap">
+    <div *ngIf="loadMap" style="height:690px; width:100%;">
+      <yaga-map [zoom]="14" style="height: 690px;" [lat]="42.26645" [lng]="2.96163">
+        <yaga-tile-layer [url]="'https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}{r}.png'">
+          <yaga-marker [lat]="42.268662" [lng]="2.998836" ></yaga-marker>
+        </yaga-tile-layer>
+        
+      </yaga-map>
+    </div>
+  </ion-card>
+
+</ion-content>

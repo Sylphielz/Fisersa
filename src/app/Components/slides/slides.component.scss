@@ -1,0 +1,25 @@
+ion-content {
+    --background: url("src/assets/images/logscreen.gif");
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+}
+    
+ion-slide {
+    height: 90vh;
+    flex-direction: column;
+}
+
+ion-img {
+    max-width: 50vw;
+    max-height: 50vh;
+    overflow: hidden;
+}
+
+.img{    
+    display: block;
+    margin-left: 2%;
+    margin-right: auto;
+    min-width: 20%;
+    max-width: 20px; 
+}

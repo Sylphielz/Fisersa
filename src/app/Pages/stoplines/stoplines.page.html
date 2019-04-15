@@ -1,0 +1,102 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <span class="titles">Lines & Stops</span>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <!-- L1 Button -->
+    <ion-item-sliding>
+      <ion-button class="l1 animated slideInLeft fast" (click)="toggle()" shape="round" expand="block" fill="solid">
+        L1 -
+        <ion-icon name="pin" item-start></ion-icon>
+        Vilatenim - Geriàtric
+      </ion-button>
+      <ion-list>
+        <ion-item-sliding>
+          <ion-button class="l1i animated bounceInLeft" *ngIf="toggled" (click)="openRouteMap(34010001)" shape="round" expand="block" fill="outline">
+            Vilatenim - Geriàtric
+          </ion-button>
+          <ion-button class="l1i animated bounceInRight" *ngIf="toggled" (click)="openRouteMap(34010002)" shape="round" expand="block" fill="outline">
+            Geriàtric - Vilatenim
+          </ion-button>
+        </ion-item-sliding>
+      </ion-list>
+    </ion-item-sliding>
+
+    <!-- L2 Button -->
+    <ion-item-sliding>
+      <ion-button class="l2 animated slideInRight fast" (click)="toggle2()" shape="round" expand="block" fill="solid">
+        L2 -
+        <ion-icon name="pin" item-start></ion-icon>
+        Sud
+      </ion-button>
+      <ion-list>
+        <ion-item-sliding>
+          <ion-button class="l2i animated bounceInRight" *ngIf="toggledl2" (click)="openRouteMap(34020001)" shape="round" expand="block" fill="outline">
+            Pallach - Olivar Gran
+          </ion-button>
+          <ion-button class="l2i animated bounceInLeft" *ngIf="toggledl2" (click)="openRouteMap(34020101)" shape="round" expand="block" fill="outline">
+            Olivar Gran - Del Mont
+          </ion-button>
+          <ion-button class="l2i animated bounceInRight" *ngIf="toggledl2" (click)="openRouteMap(34020201)" shape="round" expand="block" fill="outline">
+            Olivar Gran - Borrasà
+          </ion-button>
+          <ion-button class="l2i animated bounceInLeft" *ngIf="toggledl2" (click)="openRouteMap(34020401)" shape="round" expand="block" fill="outline">
+            Rbla Nova - Olivar Gran
+          </ion-button>
+          <ion-button class="l2i animated bounceInRight" *ngIf="toggledl2" (click)="openRouteMap(34020501)" shape="round" expand="block" fill="outline">
+            Especial Mercat
+          </ion-button>
+        </ion-item-sliding>
+      </ion-list>
+    </ion-item-sliding>
+
+    <!-- L3 Button -->
+    <ion-item-sliding>
+      <ion-button class="l3 animated slideInLeft fast" (click)="toggle3()" shape="round" expand="block" fill="solid">
+        L3 -
+        <ion-icon name="pin" item-start></ion-icon>
+        Nord
+      </ion-button>
+      <ion-list>
+        <ion-item-sliding>
+          <ion-button class="l3i animated bounceInLeft" *ngIf="toggledl3" (click)="openRouteMap(34030001)" shape="round" expand="block" fill="outline">
+            Nord
+          </ion-button>
+          <ion-button class="l3i animated bounceInRight" *ngIf="toggledl3" (click)="openRouteMap(34030101)" shape="round" expand="block" fill="outline">
+            Especial Mercat
+          </ion-button>
+        </ion-item-sliding>
+      </ion-list>
+    </ion-item-sliding>
+
+    <!-- LE Button -->
+    <ion-item-sliding>
+      <ion-button class="le animated slideInRight fast" (click)="toggle4()" shape="round" expand="block" fill="solid">
+        LE -
+        <ion-icon name="pin" item-start></ion-icon>
+        Centre
+      </ion-button>
+      <ion-list>
+        <ion-item-sliding>
+          <ion-button class="lei animated bounceInRight" *ngIf="toggledle" (click)="openRouteMap(34100201)" shape="round" expand="block" fill="outline">
+            Centre
+          </ion-button>
+          <ion-button class="lei animated bounceInLeft" *ngIf="toggledle" (click)="openRouteMap(34100301)" shape="round" expand="block" fill="outline">
+
+            Rbla Nova - Olivar Gran
+          </ion-button>
+        </ion-item-sliding>
+      </ion-list>
+    </ion-item-sliding>
+
+  </ion-list>
+</ion-content>

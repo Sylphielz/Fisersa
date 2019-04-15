@@ -1,0 +1,29 @@
+.hdr{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    border: 2px solid #fff;
+    border-radius: 40px;
+    width: 50%;
+    margin: auto;    
+}
+.centered{
+    display: flex;
+    justify-content: center;
+    padding: 5px;    
+}
+
+//Div style
+.tag{
+    padding: 5px;
+    border: 2px solid #3171e0;
+    border-radius: 25px;
+    background-color: #B5C5E0;  
+    width: fit-content;
+    margin: auto;
+}
+//linked color change
+.linked{
+    color: #000000;
+    text-decoration: none;    
+}

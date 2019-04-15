@@ -1,0 +1,21 @@
+ <ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Favoritos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid >
+    <div *ngIf="!favIds.length"> No tienes favoritos, añade alguno!</div>
+    <div *ngIf="favIds.length">
+      <ion-row *ngFor="let stop of stops">
+        <ion-col>
+          <ion-button>{{ stop.stop_name }}</ion-button>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-grid>
+</ion-content>
